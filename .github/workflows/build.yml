@@ -79,8 +79,10 @@ jobs:
         cd workspace
         export ALLOW_MISSING_DEPENDENCIES=true
         export LC_ALL="C"
+        export TARGET_RELEASE=ap2a
         source build/envsetup.sh
-        lunch twrp_NX809J-ap2a-eng
+        lunch twrp_NX809J-eng
+        make clean
         make recoveryimage -j$(nproc --all)
 
     - name: Upload Recovery
