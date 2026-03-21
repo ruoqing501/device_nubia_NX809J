@@ -95,7 +95,7 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         files: |
-          workspace/out/target/product/NX809J/recovery.img
+          workspace/out/target/product/NX809J/*.img
         name: TWRP-NX809J-${{ github.run_id }}
         tag_name: ${{ github.run_id }}
         body: |
@@ -103,16 +103,12 @@ jobs:
           
           **WARNING: Unofficial build. Test before flashing!**
           
+          ### Important Note for A/B Devices
+          Your device may not have a dedicated recovery partition. If you see `vendor_boot.img` or `boot.img` in this release, that is your recovery.
+          
           ### Test (safe, temporary)
           ```
-          fastboot boot recovery.img
-          ```
-          
-          ### Install (only after testing)
-          ```
-          fastboot flash recovery_a recovery.img
-          fastboot flash recovery_b recovery.img
+          fastboot boot <filename>.img
           ```
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
