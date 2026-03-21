@@ -109,7 +109,12 @@ jobs:
             touch out/target/product/NX809J/${dir}/SHARED_LIBRARIES/${lib}_intermediates/${lib}.so.toc
           done
         done
-
+    - name: Fix fscrypt policy mismatch in libtar
+      run: |
+        cd workspace
+        sed -i 's/-Werror/-Wno-error/g' bootable/recovery/libtar/Android.mk 2>/dev/null || true
+        sed -i 's/-Werror/-Wno-error/g' bootable/recovery/libtar/Android.bp 2>/dev/null || true
+        
     - name: Building TWRP
       run: |
         cd workspace
