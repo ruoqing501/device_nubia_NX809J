@@ -84,6 +84,13 @@ jobs:
         make clean
         make recoveryimage -j$(nproc --all)
 
+    - name: Find recovery image
+      run: |
+        echo "=== Looking for recovery.img ==="
+        find workspace/out -name "recovery.img" -o -name "boot.img" -o -name "*.img" 2>/dev/null | head -20
+        echo "=== Product directory ==="
+        ls workspace/out/target/product/ 2>/dev/null
+
     - name: Upload Recovery
       uses: softprops/action-gh-release@v1
       with:
@@ -108,3 +115,4 @@ jobs:
           ```
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
