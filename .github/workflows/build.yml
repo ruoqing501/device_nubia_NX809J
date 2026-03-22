@@ -81,7 +81,7 @@ jobs:
         export ALLOW_MISSING_DEPENDENCIES=true
         export LC_ALL="C"
         source build/envsetup.sh
-        lunch twrp_NX809J-eng
+        lunch twrp_NX809J
         make recoveryimage -j$(nproc --all)
 
     - name: Find recovery image
