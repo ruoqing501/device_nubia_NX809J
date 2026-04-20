@@ -20,7 +20,7 @@ Unofficial TWRP recovery for the Nubia Red Magic 11 Pro (NX809J).
 |-----------|--------|
 | Device | Nubia Red Magic 11 Pro |
 | Codename | canoe (NX809J) |
-| SoC | Qualcomm Snapdragon 8 Elite (SM8750) |
+| SoC | Qualcomm Snapdragon 8 Elite (SM8850) |
 | SoC Platform | sun |
 | GPU | Adreno 830 |
 | Architecture | arm64 (ARMv8-A) |
