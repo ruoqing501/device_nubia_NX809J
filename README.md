@@ -1,6 +1,6 @@
-# TWRP Device Tree — Nubia Red Magic 11 Pro (NX809J)
+# TWRP Device Tree — Red Magic 11 Pro ＋
 
-Unofficial TWRP recovery for the Nubia Red Magic 11 Pro (NX809J).
+Unofficial TWRP recovery for the Nubia Red Magic 11 Pro + (NX809J).
 
 ## Status
 
@@ -18,11 +18,11 @@ Unofficial TWRP recovery for the Nubia Red Magic 11 Pro (NX809J).
 
 | Component | Detail |
 |-----------|--------|
-| Device | Nubia Red Magic 11 Pro |
+| Device | Nubia Red Magic 11 Pro +|
 | Codename | canoe (NX809J) |
-| SoC | Qualcomm Snapdragon 8 Elite (SM8850) |
-| SoC Platform | sun |
-| GPU | Adreno 830 |
+| SoC | Qualcomm Snapdragon 8 Elite gen5 (SM8850) |
+| SoC Platform | canoe |
+| GPU | Adreno 840 |
 | Architecture | arm64 (ARMv8-A) |
 | Kernel | Linux 6.12.23 (GKI, Android 16) |
 | Boot header | v4 |
